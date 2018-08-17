@@ -1,1 +1,1 @@
-# clickyGame
+For this app, the website that github provides doesn't actually work. If you run it locally, and run the command yarn start on app.js, the clickyGame works. 
