@@ -21,13 +21,13 @@ class App extends React.Component {
       });
     }
     else if (spongeButton !== randomNum) {
-      if (this.state.currentScore > this.state.highScore) {
+      if (this.state.currentScore >= this.state.highScore) {
         this.setState({
-          currentScore: this.state.highScore
-  
+          highScore: this.state.currentScore,
+          currentScore: 0
         })
       }
-      else if (this.state.currentScore <= this.state.highScore) {
+      else if (this.state.currentScore < this.state.highScore) {
         this.setState({
           currentScore: 0
         })
@@ -45,13 +45,13 @@ class App extends React.Component {
       });
     }
     else if (squidButton !== randomNum) {
-      if (this.state.currentScore > this.state.highScore) {
+      if (this.state.currentScore >= this.state.highScore) {
         this.setState({
-          currentScore: this.state.highScore
-  
+          highScore: this.state.currentScore,
+          currentScore: 0
         })
       }
-      else if (this.state.currentScore <= this.state.highScore) {
+      else if (this.state.currentScore < this.state.highScore) {
         this.setState({
           currentScore: 0
         })
@@ -60,7 +60,7 @@ class App extends React.Component {
     }
 
   }
-  KrabButton = () => {
+  KrabButton = (props) => {
     const randomNum = (Math.floor(Math.random() * 3) + 1);
     const KrabsButton = 3;
 
@@ -71,13 +71,13 @@ class App extends React.Component {
       console.log('Correct Guess: ' + this.state.currentScore);
     }
     else if (KrabsButton !== randomNum) {
-      if (this.state.currentScore > this.state.highScore) {
+      if (this.state.currentScore >= this.state.highScore) {
         this.setState({
-          currentScore: this.state.highScore
-  
+          highScore: this.state.currentScore,
+          currentScore: 0
         })
       }
-      else if (this.state.currentScore <= this.state.highScore) {
+      else if (this.state.currentScore < this.state.highScore) {
         this.setState({
           currentScore: 0
         })
